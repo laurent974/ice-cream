@@ -27,5 +27,14 @@ app/node_modules
 app/vendor
 app/.env
 app/public/wordpress
+app/languages
+app/mu-plugins/*
+app/!mu-plugins/mu-plugins.php
+app/plugins/*
+!app/plugins/index.php
+app/upgrade
+app/uploads
+app/wordpress
+
 
 db-data
