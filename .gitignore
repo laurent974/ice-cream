@@ -35,6 +35,7 @@ app/public/plugins/*
 app/public/upgrade
 app/public/uploads
 app/public/wordpress
+app/package-lock.json
 
 
 db-data
