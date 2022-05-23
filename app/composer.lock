@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a164ec68e121e6803926533f673543c4",
+    "content-hash": "317460f14de36e60f8070e86468f8b28",
     "packages": [
         {
             "name": "composer/installers",
@@ -1023,6 +1023,102 @@
                 "source": "https://github.com/wordplate/framework/tree/10.0.1"
             },
             "time": "2021-11-01T10:04:44+00:00"
+        },
+        {
+            "name": "wordplate/headache",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wordplate/headache.git",
+                "reference": "13522adac62320003825aa8e3a0f2d92591b6ea1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wordplate/headache/zipball/13522adac62320003825aa8e3a0f2d92591b6ea1",
+                "reference": "13522adac62320003825aa8e3a0f2d92591b6ea1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@doubledip.se"
+                }
+            ],
+            "description": "An easy-to-swallow painkiller plugin for WordPress",
+            "keywords": [
+                "head",
+                "headache",
+                "plugin",
+                "wordplate",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/wordplate/headache/issues",
+                "source": "https://github.com/wordplate/headache/tree/1.4.0"
+            },
+            "time": "2021-10-18T07:21:53+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/advanced-custom-fields",
+            "version": "5.12.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "reference": "tags/5.12.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.12.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
+        },
+        {
+            "name": "wpackagist-plugin/blade",
+            "version": "0.3.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/blade/",
+                "reference": "tags/0.3.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/blade.0.3.7.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/blade/"
+        },
+        {
+            "name": "wpackagist-plugin/clean-image-filenames",
+            "version": "1.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/clean-image-filenames/",
+                "reference": "tags/1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/clean-image-filenames.1.3.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/clean-image-filenames/"
         },
         {
             "name": "wpackagist-plugin/hide-updates",
