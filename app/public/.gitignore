@@ -1,6 +1,7 @@
 languages
 mu-plugins/*
 !mu-plugins/mu-plugins.php
+!mu-plugins/advanced-custom-fields-pro
 plugins/*
 !plugins/index.php
 upgrade
