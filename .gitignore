@@ -21,3 +21,11 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+
+# Wordplate
+app/node_modules
+app/vendor
+app/.env
+app/public/wordpress
+
+db-data
