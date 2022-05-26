@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "21e5b671dc18e4ea37ccd41ac7aed4cf",
+    "content-hash": "7f78c8e3f1a704c779491f79fd81e894",
     "packages": [
         {
             "name": "composer/installers",
@@ -1131,24 +1131,6 @@
             "time": "2021-10-18T07:21:53+00:00"
         },
         {
-            "name": "wpackagist-plugin/blade",
-            "version": "0.3.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/blade/",
-                "reference": "tags/0.3.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/blade.0.3.7.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/blade/"
-        },
-        {
             "name": "wpackagist-plugin/clean-image-filenames",
             "version": "1.3",
             "source": {
@@ -1195,5 +1177,5 @@
         "php": "^7.4 || ^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
