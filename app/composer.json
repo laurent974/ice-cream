@@ -30,7 +30,8 @@
             "public/mu-plugins/{$name}": [
                 "type:wordpress-muplugin",
                 "wpackagist-plugin/hide-updates",
-                "wpackagist-plugin/clean-image-filenames"
+                "wpackagist-plugin/clean-image-filenames",
+                "wordplate/acf"
             ],
             "public/plugins/{$name}": [
                 "type:wordpress-plugin"
