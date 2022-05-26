@@ -31,3 +31,6 @@ app/public/wordpress
 app/package-lock.json
 
 db-data
+
+# Generated public theme files
+app/public/themes/ice-cream/public
