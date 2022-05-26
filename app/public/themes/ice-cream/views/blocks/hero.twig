@@ -1,0 +1,19 @@
+{#
+/**
+ * Block Name: Example block
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+<div class="hero">
+  <div>
+    <h1>{{ fields.titre }}</h1>
+    <p>{{ fields.slogan }}</p>
+    <p>{{ fields.contenu }}</p>
+  </div>
+
+  <div>
+    <img src="{{ fields.image.url }}" alt="{{ fields.image.url }}">
+  </div>
+</div>
