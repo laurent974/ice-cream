@@ -1,4 +1,4 @@
-# Documentation
+# Petite liste de commandes
 
 ## Lancer docker
 docker compose up -d
