@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.4 || ^8.0",
+        "timber/timber": "^1.19",
         "wordplate/acf": "^11.2",
         "wordplate/framework": "^10.0",
         "wordplate/headache": "^1.4",
