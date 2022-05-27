@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: php7.4-apache:projet
+    image: php8.0-apache:projet
     container_name: projet-php-apache
     ports:
       # local:container
