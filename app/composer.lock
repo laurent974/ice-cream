@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39e71cb626efca4a1774a0d7ca3fa9ad",
+    "content-hash": "0ea002b0027e2a34956a73a42f7c9b3d",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -274,16 +274,16 @@
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "5.9.3",
+            "version": "6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "455d38c7b7bcdce3e0a1c6108eccca8de1860361"
+                "reference": "90d8de3a682f2ed93ebe8cf99bec8fb297d43967"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/455d38c7b7bcdce3e0a1c6108eccca8de1860361",
-                "reference": "455d38c7b7bcdce3e0a1c6108eccca8de1860361",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/90d8de3a682f2ed93ebe8cf99bec8fb297d43967",
+                "reference": "90d8de3a682f2ed93ebe8cf99bec8fb297d43967",
                 "shasum": ""
             },
             "require": {
@@ -291,7 +291,7 @@
                 "php": ">=5.6.20"
             },
             "provide": {
-                "wordpress/core-implementation": "5.9.3"
+                "wordpress/core-implementation": "6.0.0"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -318,7 +318,7 @@
                 "source": "https://core.trac.wordpress.org/browser",
                 "wiki": "https://codex.wordpress.org/"
             },
-            "time": "2022-04-05T19:23:48+00:00"
+            "time": "2022-05-24T19:10:11+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -924,32 +924,31 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.4.8",
+            "version": "v6.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "cdcadd343d31ad16fc5e006b0de81ea307435053"
+                "reference": "ac81072464221e73ee994d12f0b8a2af4a9ed798"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/cdcadd343d31ad16fc5e006b0de81ea307435053",
-                "reference": "cdcadd343d31ad16fc5e006b0de81ea307435053",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/ac81072464221e73ee994d12f0b8a2af4a9ed798",
+                "reference": "ac81072464221e73ee994d12f0b8a2af4a9ed798",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.5",
-                "symfony/polyfill-mbstring": "~1.0",
-                "symfony/polyfill-php80": "^1.16"
+                "php": ">=8.0.2",
+                "symfony/polyfill-mbstring": "~1.0"
             },
             "conflict": {
                 "phpunit/phpunit": "<5.4.3",
-                "symfony/console": "<4.4"
+                "symfony/console": "<5.4"
             },
             "require-dev": {
                 "ext-iconv": "*",
-                "symfony/console": "^4.4|^5.0|^6.0",
-                "symfony/process": "^4.4|^5.0|^6.0",
-                "symfony/uid": "^5.1|^6.0",
+                "symfony/console": "^5.4|^6.0",
+                "symfony/process": "^5.4|^6.0",
+                "symfony/uid": "^5.4|^6.0",
                 "twig/twig": "^2.13|^3.0.4"
             },
             "suggest": {
@@ -993,7 +992,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v5.4.8"
+                "source": "https://github.com/symfony/var-dumper/tree/v6.0.9"
             },
             "funding": [
                 {
@@ -1009,7 +1008,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-26T13:19:20+00:00"
+            "time": "2022-05-21T13:33:31+00:00"
         },
         {
             "name": "timber/timber",
@@ -1436,36 +1435,36 @@
         },
         {
             "name": "wordplate/framework",
-            "version": "10.0.1",
+            "version": "11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wordplate/framework.git",
-                "reference": "abbccce631fbd7aa13659d311e4482bb343cb2a8"
+                "reference": "91b86fa761642fe96f1c577ec25488022b9b805c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wordplate/framework/zipball/abbccce631fbd7aa13659d311e4482bb343cb2a8",
-                "reference": "abbccce631fbd7aa13659d311e4482bb343cb2a8",
+                "url": "https://api.github.com/repos/wordplate/framework/zipball/91b86fa761642fe96f1c577ec25488022b9b805c",
+                "reference": "91b86fa761642fe96f1c577ec25488022b9b805c",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^2.0",
-                "johnpbloch/wordpress-core": "^5.8.1",
+                "composer/installers": "^2.1",
+                "johnpbloch/wordpress-core": "^6.0",
                 "johnpbloch/wordpress-core-installer": "^2.0",
-                "php": "^7.4 || ^8.0",
+                "php": "^8.0",
                 "roots/bedrock-autoloader": "^1.0",
-                "roots/wp-password-bcrypt": "^1.0",
-                "symfony/var-dumper": "^5.3",
-                "vlucas/phpdotenv": "^5.3"
+                "roots/wp-password-bcrypt": "^1.1",
+                "symfony/var-dumper": "^6.0",
+                "vlucas/phpdotenv": "^5.4"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.5",
-                "squizlabs/php_codesniffer": "^3.5"
+                "squizlabs/php_codesniffer": "^3.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.0-dev"
+                    "dev-master": "11.1-dev"
                 }
             },
             "autoload": {
@@ -1499,26 +1498,26 @@
             ],
             "support": {
                 "issues": "https://github.com/wordplate/framework/issues",
-                "source": "https://github.com/wordplate/framework/tree/10.0.1"
+                "source": "https://github.com/wordplate/framework/tree/11.1.0"
             },
-            "time": "2021-11-01T10:04:44+00:00"
+            "time": "2022-05-25T07:57:20+00:00"
         },
         {
             "name": "wordplate/headache",
-            "version": "1.4.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wordplate/headache.git",
-                "reference": "13522adac62320003825aa8e3a0f2d92591b6ea1"
+                "reference": "478fd60ebe436aa3b46f605d0b242444132358e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wordplate/headache/zipball/13522adac62320003825aa8e3a0f2d92591b6ea1",
-                "reference": "13522adac62320003825aa8e3a0f2d92591b6ea1",
+                "url": "https://api.github.com/repos/wordplate/headache/zipball/478fd60ebe436aa3b46f605d0b242444132358e3",
+                "reference": "478fd60ebe436aa3b46f605d0b242444132358e3",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4 || ^8.0"
+                "php": "^8.0"
             },
             "type": "wordpress-plugin",
             "notification-url": "https://packagist.org/downloads/",
@@ -1541,9 +1540,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wordplate/headache/issues",
-                "source": "https://github.com/wordplate/headache/tree/1.4.0"
+                "source": "https://github.com/wordplate/headache/tree/1.6.0"
             },
-            "time": "2021-10-18T07:21:53+00:00"
+            "time": "2022-01-26T06:46:28+00:00"
         },
         {
             "name": "wpackagist-plugin/clean-image-filenames",
@@ -1589,7 +1588,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4 || ^8.0"
+        "php": "^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"
