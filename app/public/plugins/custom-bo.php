@@ -33,6 +33,7 @@ function wpcc_allowed_block_types($allowed_block_types, $post) {
       'acf/hero',
       'acf/services',
       'acf/produits',
+      'acf/contact',
       'core/paragraph',
     );
   // }
@@ -301,6 +302,43 @@ function my_acf_init_blocks() {
     $context['fields'] = get_fields();
     $context['is_preview'] = $is_preview;
     Timber::render( 'blocks/banner2.twig', $context );
+  }
+
+  /**
+   * Form Gutenberg Block.
+   */
+  acf_register_block_type([
+    'name' => 'contact',
+    'title' => __('Formulaire de contact'),
+    'description' => __('Formulaire de contact'),
+    'render_callback' => 'ice_cream_form_block_render_callback',
+    'category' => 'theme',
+    'post_type' => array('page'),
+    'mode' => 'auto',
+    'align' => 'full',
+    'icon' => 'editor-ol', // https://developer.wordpress.org/resource/dashicons/
+  ]);
+
+  register_extended_field_group([
+    'title' => 'Form bloc',
+    'location' => [
+      Location::if('block', 'acf/contact')
+    ],
+    'fields' => [
+      Text::make('Titre')
+        ->instructions('Le titre.')
+        ->required(),
+      Text::make('Sous-titre')
+        ->instructions('Le sous-titre.')
+    ]
+  ]);
+
+  function ice_cream_form_block_render_callback( $block, $content = '', $is_preview = false ) {
+    $context = Timber::context();
+    $context['block'] = $block;
+    $context['fields'] = get_fields();
+    $context['is_preview'] = $is_preview;
+    Timber::render( 'blocks/contact.twig', $context );
   }
 }
 
