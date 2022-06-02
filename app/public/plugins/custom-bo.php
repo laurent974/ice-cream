@@ -31,6 +31,7 @@ function wpcc_allowed_block_types($allowed_block_types, $post) {
       'acf/banniere',
       'acf/hero',
       'acf/services',
+      'acf/produits',
       'core/paragraph',
     );
   // }
@@ -221,6 +222,41 @@ function my_acf_init_blocks() {
     $context['fields'] = get_fields();
     $context['is_preview'] = $is_preview;
     Timber::render( 'blocks/banner.twig', $context );
+  }
+
+  /**
+   * Simple Produits Gutenberg Block.
+   */
+  acf_register_block_type([
+    'name' => 'Produits',
+    'title' => __('Produits'),
+    'description' => __('Bloc qui liste les produits.'),
+    'render_callback' => 'ice_cream_products_block_render_callback',
+    'category' => 'theme',
+    'post_type' => array('page'),
+    'mode' => 'auto',
+    'align' => 'full',
+    'icon' => 'editor-ol', // https://developer.wordpress.org/resource/dashicons/
+  ]);
+
+  register_extended_field_group([
+    'title' => 'Produits bloc',
+    'location' => [
+      Location::if('block', 'acf/produits')
+    ],
+    'fields' => [
+      Text::make('Titre')
+        ->instructions('Le titre.')
+        ->required()
+    ]
+  ]);
+
+  function ice_cream_products_block_render_callback( $block, $content = '', $is_preview = false ) {
+    $context = Timber::context();
+    $context['block'] = $block;
+    $context['fields'] = get_fields();
+    $context['is_preview'] = $is_preview;
+    Timber::render( 'blocks/products.twig', $context );
   }
 }
 
