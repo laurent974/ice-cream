@@ -17,16 +17,17 @@ use WordPlate\Acf\Fields\Textarea;
 use WordPlate\Acf\Fields\Image;
 use WordPlate\Acf\Fields\Group;
 use WordPlate\Acf\Fields\WysiwygEditor;
+use WordPlate\Acf\Fields\Number;
 
 /**
  * Cache les blocks Gutenberg qu'on utilise pas.
  */
 function wpcc_allowed_block_types($allowed_block_types, $post) {
-  // if ( $post->post_type === 'post' ) {
-  //   return array(
-  //     'core/paragraph', // Paragraph Block
-  //   );
-  // } else {
+  if ( $post->post->post_type === 'post' ) {
+    return array(
+      'core/paragraph', // Paragraph Block
+    );
+  } else {
     return array(
       'acf/banniere',
       'acf/banniere2',
@@ -36,7 +37,7 @@ function wpcc_allowed_block_types($allowed_block_types, $post) {
       'acf/contact',
       'core/paragraph',
     );
-  // }
+  }
 }
 add_filter( 'allowed_block_types_all', 'wpcc_allowed_block_types', 10, 2 );
 
@@ -340,6 +341,22 @@ function my_acf_init_blocks() {
     $context['is_preview'] = $is_preview;
     Timber::render( 'blocks/contact.twig', $context );
   }
+
+    /**
+   * Products custom fields.
+   */
+
+  register_extended_field_group([
+    'title' => 'Produits',
+    'location' => [
+      Location::if('post_type', 'post')
+    ],
+    'fields' => [
+      Number::make('Prix')
+        ->required(),
+      Number::make('Prix barré')
+    ]
+  ]);
 }
 
 /**
@@ -352,4 +369,15 @@ function bt_timber_add_to_context ($context) {
     $context['page'] = Timber::get_post();
 
     return $context;
+}
+
+/**
+ * Desactive gutenberg pour les produits.
+ */
+add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
+function prefix_disable_gutenberg($current_status, $post_type)
+{
+    // Use your post type key instead of 'product'
+    if ($post_type === 'post') return false;
+    return $current_status;
 }
