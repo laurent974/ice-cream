@@ -48,7 +48,11 @@
       </nav>
     </div>
 
-    <div></div>
+    <div>
+      <nav class="nav-footer" role="navigation">
+        {% include "menu.twig" with {'items': menu_footer.get_items} %}
+      </nav>
+    </div>
     <div>
       <h3>Newsletter</h3>
       <form action="#">
