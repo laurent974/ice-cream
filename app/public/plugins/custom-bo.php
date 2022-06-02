@@ -29,6 +29,7 @@ function wpcc_allowed_block_types($allowed_block_types, $post) {
   // } else {
     return array(
       'acf/banniere',
+      'acf/banniere2',
       'acf/hero',
       'acf/services',
       'acf/produits',
@@ -257,6 +258,49 @@ function my_acf_init_blocks() {
     $context['fields'] = get_fields();
     $context['is_preview'] = $is_preview;
     Timber::render( 'blocks/products.twig', $context );
+  }
+
+  /**
+   * Another banner Gutenberg Block.
+   */
+  acf_register_block_type([
+    'name' => 'Banniere2',
+    'title' => __('Une banniere image + contenu'),
+    'description' => __('Baniere avec image à gauche + contenu à droite'),
+    'render_callback' => 'ice_cream_banner2_block_render_callback',
+    'category' => 'theme',
+    'post_type' => array('page'),
+    'mode' => 'auto',
+    'align' => 'full',
+    'icon' => 'editor-ol', // https://developer.wordpress.org/resource/dashicons/
+  ]);
+
+  register_extended_field_group([
+    'title' => 'Bannière 2 bloc',
+    'location' => [
+      Location::if('block', 'acf/banniere2')
+    ],
+    'fields' => [
+      Image::make('Image')
+        ->instructions('Ajouter l\'image de droite ici.')
+        ->required(),
+      Text::make('Titre')
+        ->instructions('Le titre.')
+        ->required(),
+      WysiwygEditor::make('Contenu')
+        ->instructions('Le contenu ici.')
+        ->mediaUpload(false)
+        ->toolbar('Basic')
+        ->required(),
+    ]
+  ]);
+
+  function ice_cream_banner2_block_render_callback( $block, $content = '', $is_preview = false ) {
+    $context = Timber::context();
+    $context['block'] = $block;
+    $context['fields'] = get_fields();
+    $context['is_preview'] = $is_preview;
+    Timber::render( 'blocks/banner2.twig', $context );
   }
 }
 
