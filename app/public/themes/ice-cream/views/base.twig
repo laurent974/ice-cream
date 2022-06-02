@@ -22,8 +22,50 @@
       </nav>
     {% endblock %}
   </header>
+
   {% block content %}
     Ici le bloc content
   {% endblock %}
+
+  <footer class="footer">
+    <div>
+      <a href="#"><img src="" alt=""></a>
+      <p>Some food has looked so awful that it's looked like something that the dog's brought home.</p>
+      <div>
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">fb</a></li>
+          <li><a href="#">tw</a></li>
+          <li><a href="#">in</a></li>
+          <li><a href="#">li</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <nav class="nav-footer" role="navigation">
+        {% include "menu.twig" with {'items': menu.get_items} %}
+      </nav>
+    </div>
+
+    <div></div>
+    <div>
+      <h3>Newsletter</h3>
+      <form action="#">
+        <div class="input-group">
+          <input type="mail" autocomplete="email">
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
+
+      <ul>
+        <li><a href="#">paypal</a></li>
+        <li><a href="#">master card</a></li>
+        <li><a href="#">visa</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  {{ wp_footer }}
 </body>
 </html>
